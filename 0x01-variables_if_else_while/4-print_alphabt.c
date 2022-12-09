@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-*maim - main of the program
+*main - main of the program
 *Return: 0
 **/
 
-int main (void)
+int main(void)
 {
 char c = 'a';
 
