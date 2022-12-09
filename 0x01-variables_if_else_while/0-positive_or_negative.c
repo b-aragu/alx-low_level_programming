@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/** main - one type
+/** Main - one type
  * Return: Always 0
  **/
 int main(void)
