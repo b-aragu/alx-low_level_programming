@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
-* main - Entry Point
+* Main - Entry Point
 * return- Always 0
 **/
 int main(void)
