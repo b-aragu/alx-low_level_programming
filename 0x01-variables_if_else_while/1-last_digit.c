@@ -2,7 +2,6 @@
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-
 /**
 * main - main block
 * Description: Get a random number and check its last digit compare it with 0
