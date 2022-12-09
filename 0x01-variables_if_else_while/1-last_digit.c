@@ -4,8 +4,9 @@
 #include <string.h>
 
 /**
-* Main - Entry Point
-* return- Always 0
+* main - main block
+* Description: Get a random number and check its last digit compare it with 0
+* return: 0
 **/
 int main(void)
 {
