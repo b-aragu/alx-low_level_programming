@@ -13,11 +13,11 @@ for (c = '0'; c <= '9'; c++)
 	putchar(c);
 }
 
-c = 'A';
-for (c = 'A'; c <= 'F'; c++)
+c = 'a';
+for (c = 'a'; c <= 'f'; c++)
 {
 	putchar(c);
 }
 putchar('\n');
 return (0);
-}
+i}
