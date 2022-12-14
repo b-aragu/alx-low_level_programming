@@ -1,9 +1,7 @@
 #include "main.h"
 /**
 *main - The main function of the program
-*
-*
-*Return - Always zero for the main function
+*Return: Always zero for the main function
 **/
 int main(void)
 {
