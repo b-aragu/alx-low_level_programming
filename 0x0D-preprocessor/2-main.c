@@ -1,13 +1,24 @@
 #include <stdio.h>
 #include <string.h>
 
-#define FILENAME (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
-
 /**
-* main: The main function of the program 
-* Return - 
-int main(void) {
-    printf("%s\n", FILENAME);
-    return 0;
-}
+* main - The main function  program
+* @argc: The number of arguement count
+* @argv: The number of arguement vector
+* Return: the name of the compilaation file
+**/
+int main(int argc, char *argv[])
+{
+	char *fileName = strrchr(__FILE__, '/');
 
+	if (fileName == NULL)
+	{
+		fileName = __FILE__;
+	}
+	else
+	{
+		fileName++;
+	}
+	printf("%s\n", fileName);
+	return (0);
+}
