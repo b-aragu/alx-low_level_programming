@@ -4,9 +4,7 @@
 
 /**
 * print_dog - function that prints a struct dog
-* @name: Dogs name
-* @age: Puppies age
-* @owner: Owners name
+* @d: A pointer
 **/
 
 void print_dog(struct dog *d)
@@ -17,7 +15,7 @@ void print_dog(struct dog *d)
 			{
 			printf("Name: %s\n", (*d).name);
 			printf("Age: %f\n", (*d).age);
-			printf("Owner: %s\n",(*d).owner);
+			printf("Owner: %s\n", (*d).owner);
 			}
 		else
 			{
