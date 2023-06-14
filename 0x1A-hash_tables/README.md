@@ -29,6 +29,14 @@ A hash table, also known as a hash map, is a data structure that allows efficien
    - Find the key in the hash table using the retrieval process.
    - If found, remove the key-value pair from the linked list or mark it as deleted in open addressing.
 
+## Load Factor
+- The load factor is a measure of how full a hash table is. It is the ratio of the number of elements stored in the hash table to the total number of slots or buckets in the table. The load factor helps determine the efficiency and performance of a hash table.
+
+- A higher load factor indicates a more densely populated hash table.
+- A lower load factor indicates a less full hash table.
+- The load factor can be used to decide when to resize the hash table to maintain good performance.
+
+##hashtables notes
 - A hashtable is a data structure used to store info with 2 major components:
 1. Key 
 2. Value
