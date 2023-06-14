@@ -1,3 +1,34 @@
+# Hash Tables: A Complete Guide
+
+## Introduction
+A hash table, also known as a hash map, is a data structure that allows efficient storage and retrieval of key-value pairs. It is based on the concept of hashing, which involves converting a key into a unique numerical value called a hash code.
+
+## How Hash Tables Work
+1. **Hash Function**: A hash function takes a key as input and computes a hash code, which is used as an index to store the corresponding value in an array. The hash function should produce the same hash code for the same key consistently.
+
+2. **Array and Buckets**: The hash table uses an array to store the key-value pairs. Each element in the array is called a bucket. The number of buckets is predetermined and is typically a prime number to achieve better distribution.
+
+3. **Hash Code to Index**: The hash code is mapped to an index in the array using a process called hashing. A common approach is to use the modulus operator `%` to obtain the remainder of dividing the hash code by the number of buckets. This ensures that the index falls within the valid range of the array.
+
+4. **Collision Handling**: Since multiple keys can produce the same hash code (collisions), collision handling techniques are required. Two common approaches are separate chaining and open addressing. 
+   - **Separate Chaining**: Each bucket contains a linked list. When a collision occurs, the new key-value pair is appended to the linked list at that bucket.
+   - **Open Addressing**: When a collision occurs, the new key-value pair is stored in the next available slot in the array, using techniques like linear probing or quadratic probing.
+
+5. **Insertion**: To insert a key-value pair into a hash table:
+   - Compute the hash code for the key.
+   - Map the hash code to an index using the hashing technique.
+   - If there is no collision, store the key-value pair at that index.
+   - If a collision occurs, apply the appropriate collision resolution technique.
+
+6. **Retrieval**: To retrieve a value from the hash table:
+   - Compute the hash code for the given key.
+   - Map the hash code to an index.
+   - Traverse the linked list or probe through the array using the collision resolution technique until the key is found or the end is reached.
+
+7. **Deletion**: To delete a key-value pair from the hash table:
+   - Find the key in the hash table using the retrieval process.
+   - If found, remove the key-value pair from the linked list or mark it as deleted in open addressing.
+
 - A hashtable is a data structure used to store info with 2 major components:
 1. Key 
 2. Value
