@@ -30,6 +30,8 @@ typedef struct hash_table_s
      hash_node_t **array;
 } hash_table_t;
 
+
+
 /* Including libraries */
 #include <stdio.h>
 #include <stdlib.h>
