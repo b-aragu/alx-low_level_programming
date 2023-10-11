@@ -42,6 +42,72 @@
   - Caching data for efficient access.
   - Solving problems in algorithmic competitions.
   - Implementing data structures like sets and maps.
+# Hash Tables in C
+
+Hash tables are data structures that allow efficient storage and retrieval of data. In this article, we will explore the concepts of hash functions, hash tables, collision resolution, and common use cases in the context of C programming.
+
+## What is a Hash Function?
+
+A **hash function** is a mathematical function that takes an input (or 'key') and returns a fixed-size string of characters, which is typically a numerical value. It transforms data into a hash code, which is used to index the data. Good hash functions have the following characteristics:
+- Deterministic: For the same input, it always produces the same output.
+- Efficient: The computation of the hash code should be fast.
+- Uniform distribution: The hash codes should be distributed as evenly as possible.
+
+In C, you can implement a simple hash function like this:
+
+```c
+unsigned int hash(const char *key) {
+    unsigned int hash = 0;
+    for (int i = 0; key[i] != '\0'; i++) {
+        hash = (hash << 5) + key[i];
+    }
+    return hash;
+}
+```
+What Makes a Good Hash Function?
+A good hash function should aim to distribute keys uniformly across the hash table to minimize collisions. It should also avoid clustering, where many keys are hashed to the same index. Additionally, a good hash function should be efficient to compute.
+
+What is a Hash Table?
+A hash table is a data structure that uses a hash function to map keys to values, allowing efficient insertion, retrieval, and deletion of data. It consists of an array of buckets, each capable of storing one or more key-value pairs. In C, a hash table can be implemented as an array of linked lists or as an array of key-value pairs.
+
+How to Use Hash Tables in C
+In C, you can create a basic hash table as follows:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TABLE_SIZE 1000
+
+typedef struct KeyValuePair {
+    char *key;
+    int value;
+    struct KeyValuePair *next;
+} KeyValuePair;
+
+KeyValuePair *table[TABLE_SIZE];
+
+// Implement functions for insertion, retrieval, and deletion here.
+
+```
+Collisions and Collision Resolution
+Collisions occur when two different keys map to the same bucket in a hash table. To resolve collisions, several techniques are used, including chaining and open addressing.
+
+Chaining: Each bucket in the hash table is a linked list. When a collision occurs, the new key-value pair is added to the list.
+Open Addressing: When a collision occurs, the algorithm searches for the next available bucket in a systematic way, such as linear probing or quadratic probing.
+Advantages of Hash Tables
+Fast retrieval: Hash tables provide fast access to data, often in constant time.
+Efficient storage: They are memory-efficient and can store large datasets without consuming much memory.
+Drawbacks of Hash Tables
+Collisions: Dealing with collisions can be complex.
+Space complexity: Hash tables may require more memory than other data structures.
+Common Use Cases of Hash Tables
+Associative Arrays: Hash tables are often used to implement key-value stores, similar to dictionaries in other programming languages.
+Caching: They are used for caching frequently accessed data to improve performance.
+Algorithmic Competitions: Hash tables are essential in competitive programming for solving a wide range of problems.
+Data Structures: Hash tables can be used to implement sets, maps, and other abstract data types.
+Conclusion
+Hash tables are versatile data structures used to efficiently manage data in C programming. Understanding hash functions, hash tables, collision resolution, and their applications is essential for solving real-world problems and algorithmic challenges in various domains.
+
 
 - A hashtable is a data structure used to store info with 2 major components:
 1. Key 
