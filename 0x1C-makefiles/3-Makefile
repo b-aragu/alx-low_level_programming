@@ -1,0 +1,29 @@
+# make -f 3-Makefile
+# school file for building 'school' executable
+# adding variables and making it first useful
+
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+.PHONY: clean oclean fclean re
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
+
+%.o: %.c
+	$(CC) -c -o $@ $<
+
+oclean:
+	$(RM) $(OBJ)
+
+clean:
+	$(RM) $(OBJ) $(NAME) *~ *.swp
+
+fclean: clean
+
+re: fclean all
+
