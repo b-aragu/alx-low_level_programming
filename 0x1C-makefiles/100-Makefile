@@ -3,28 +3,16 @@
 # adding variables and making it first useful
 
 CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
-NAME = school
-RM = rm -f
+SRC = main.c holberton.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = holberton
 CFLAGS = -Wall -Werror -Wextra -pedantic
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
-
-%.o:%.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-clean:
-	$(RM) $(OBJ) $(NAME) *~ *.swp
-
-oclean:
-	$(RM) $(OBJ)
-
-fclean: clean
-
-re: fclean all
-
-.PHONY: re clean oclean fclean
+.PHONY : all clean oclean fclean re
+all : m.h $(OBJ)
+    $(CC) $(OBJ) -o $(NAME)
+clean :
+    $(RM) *~ $(NAME)
+oclean :
+    $(RM) $(OBJ)
+fclean : clean oclean
+re : oclean all
